@@ -12,7 +12,7 @@ cancelBtn.addEventListener("click", () => {
 submitBtn.addEventListener("click", (event) => {
   event.preventDefault();
 
-  const commentText = commentTextarea.value.trim(); // textarea의 텍스트
+  const commentText = commentTextarea.value.trim();
 
   if (commentText !== "") {
     const commentItem = document.createElement("li");
