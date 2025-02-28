@@ -1,19 +1,37 @@
-console.log(
-  "%c" +
-    " __      __  ______   __  __   ______     " +
-    "\n" +
-    "/\\ \\  __/\\ \\ /\\__  _\\ /\\ \\ /\\ \\ /\\__  _\\    " +
-    "\n" +
-    "\\ \\ \\/\\ \\ \\ \\/_\\/\\ \\/ \\ \\ \\/'/'\\/ _/\\ \\/    " +
-    "\n" +
-    " \\ \\ \\ \\ \\ \\ \\ \\ \\ \\  \\ \\ , <    \\ \\ \\    " +
-    "\n" +
-    "  \\ \\ \\_/ \\_\\ \\ \\_\\ \\__\\ \\ \\\\`\\   \\_\\ \\__ " +
-    "\n" +
-    "   \\ `\\___x___/ /\\_____\\\\ \\_\\ \\_\\ /\\_____\\ " +
-    "\n" +
-    "    '/__//__/  /_____/ \\/_/\\/_/ /_____/",
-  "color: #d81b60; font-size: 16px; font-weight: bold;"
-);
+const commentTextarea = document.querySelector("textarea");
+const cancelBtn = document.querySelector(".cancel-btn");
+const submitBtn = document.querySelector(".submit-btn");
+const commentList = document.querySelector(".comment-list");
 
-console.log("알맞은 스크립트를 작성하세요");
+commentTextarea.value = "";
+
+cancelBtn.addEventListener("click", () => {
+  commentTextarea.value = "";
+});
+
+submitBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  const commentText = commentTextarea.value.trim(); // textarea의 텍스트
+
+  if (commentText !== "") {
+    const commentItem = document.createElement("li");
+    commentItem.innerHTML = `
+        <div class="comment-item">
+          <div class="comment-author">
+            <img src="./images/comment-author-icon.png" alt="사용자 프로필 이미지" />
+            <span>방문자</span>
+          </div>
+          <div class="comment-content">
+            ${commentText}
+          </div>
+        </div>
+      `;
+
+    commentList.appendChild(commentItem);
+    commentTextarea.value = "";
+  }
+  if (!commentText) {
+    alert("댓글을 작성해주세요.");
+  }
+});
