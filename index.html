@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>자기소개 위키 페이지</title>
     <link rel="stylesheet" href="./css/main.css" />
-    <script src="./js/index.js"></script>
+    
   </head>
   <body>
     <div id="app">
@@ -16,46 +16,66 @@
         </h1>
       </header>
       <main>
-        <h2 class="title">크론</h2>
+        <h2 class="title">세라</h2>
         <hr />
-        <section>
+        <section id="me">
           <h3 class="subtitle">자기소개</h3>
           <p>
-            안녕하세요, 저는 끊임없이 새로운 도전을 통해 성장하는 것을 즐기는 크론이에요. 안정적인 삶에서 벗어나 세 번의
-            큰 전환점을 겪으며 지금의 제가 되었어요. 어제보다 더 나은 오늘의 나를 만들기 위해 노력하고 있죠. 매일의 작은
-            성취들이 모여 제가 한 걸음 더 성장했다는 것을 느낄 때면 가슴이 벅차오르거든요. 그러다 문득, 저처럼 변화를
-            갈망하며 도전을 꿈꾸는 분들이 많다는 것을 알게 되었어요. 나의 성장도 의미 있지만, 누군가의 성장을 함께할 수
-            있다는 건 매일 새로운 설렘을 주는 일이에요.
+            안녕하세요, 문제 해결을 통해 긍정적인 변화를 만들고 싶어하는 FE 개발자 김세빈입니다.  
+            사람들이 겪고 있는 불편함을 발견하고 이를 해결하는 과정에서 큰 보람을 느낍니다.  
+            내가 만든 서비스가 누군가에게 가치를 제공하고, 실질적인 변화를 이끌어낼 때 가장 행복하다고 느껴요.  
+            앞으로도 더 나은 사용자 경험을 고민하며, 기술을 통해 실질적인 가치를 전달하는 개발자가 되고 싶습니다!
           </p>
         </section>
 
-        <section>
+        <section id="gallary">
+        <h3 class="subtitle">나만의 갤러리</h3>
+          <div class="gallery-grid">
+            <img src="./images/gallary/1.png" alt="1">
+            <img src="./images/gallary/2.png" alt="2">
+            <img src="./images/gallary/3.png" alt="3">
+            <img src="./images/gallary/4.png" alt="4">
+            <img src="./images/gallary/5.png" alt="5">
+            <img src="./images/gallary/6.jpeg" alt="6">
+            <img src="./images/gallary/7.png" alt="7">
+          </div>
+        </section>
+        
+        <section id="cry">
           <h3 class="subtitle">나를 울린 인생 작품</h3>
           <article>
-            <h4>인생 영화</h4>
+            <h4>인생 드라마</h4>
             <div class="thumbnail">
               <img
-                src="https://image.tmdb.org/t/p/w1280/u8ffl7CRAS12KA8eQEtkLuHg8Fm.jpg"
-                width="200"
-                alt="그래비티 영화 포스터"
+                src="./images/cry_drama.jpg"
+                width="400"
+                alt="그해 우리는 명장면"
               />
             </div>
             <p>
-              알폰소 쿠아론 감독이 연출하고 샌드라 불럭이 주연으로 출연하는 영화 「그래비티」는 우주 정거장에서 임무
-              수행 중 고립된 한 우주인의 생존과 귀환을 그린 작품이다. 대학생 시절 처음 본 이 영화는 당시엔 그저 지루한
-              우주 영화였다. 그런데 이 영화를 다시 보니, 마치 내 미래를 미리 보여준 복선과도 같다는 점을 깨달았다.
+              이 드라마는 10년 전 다큐멘터리 촬영을 계기로 만나게 된 두 남녀가 오랜 시간이 지나 다시 엮이면서 
+              벌어지는 이야기를 그리고 있어요. 고등학생 때 찍었던 다큐멘터리가 우연히 인기를 끌면서, 
+              성인이 된 두 사람이 어쩔 수 없이 다시 함께 촬영을 하게 되는데, 과거의 감정들이 하나둘 되살아나면서 
+              겪는 감정선이 정말 섬세하게 표현됐어요. 여름의 감성을 담은 따뜻한 색감과 비 오는 날의 감정선이
+              너무 애틋하고 아름다웠어요. 단순한 로맨스 드라마가 아니라, ‘사랑과 이별, 성장’이라는 주제를 감성적으로 
+              그려낸 작품이라서 더욱 와닿았던 것 같아요.
             </p>
           </article>
         </section>
 
-        <section>
+        <section id="review-section">
           <div class="comment-writing-container">
             <form>
-              <fieldset>
+              <fieldset class="comment-writing-form">
                 <legend>댓글 쓰기</legend>
+                <img src="./images/comment-author-icon.png" alt="사용자 프로필 이미지" width="30" height="30"/>
                 <textarea
                   placeholder="정말 멋진 글이네요. 크루가 감동할 수 있도록 훈훈해지는 댓글 부탁 드립니다."
                 ></textarea>
+                  <div class="button-container">
+                    <button type="button" class="cancel-btn">취소</button>
+                    <button type="submit" class="submit-btn">등록</button>
+                  </div>
               </fieldset>
             </form>
           </div>
@@ -74,32 +94,6 @@
                 </div>
               </div>
             </li>
-            <li>
-              <div class="comment-item">
-                <div class="comment-author">
-                  <img src="./images/comment-author-icon.png" alt="사용자 프로필 이미지" />
-                  <span>방문자</span>
-                </div>
-                <div class="comment-content">
-                  와... 크론이라는 닉네임의 의미를 읽고 푸지 이발사가 딱 떠올랐어요. 저도 회사에서 30분 단위로 시간
-                  쪼개서 일정 관리하다가 얼마 전에 번아웃 왔거든요 😅 시간을 아낀다고 오히려 삶을 놓치고 있었던 것
-                  같아서 마음이 찡했습니다. 글쓴이님 글 덕분에 오늘은 퇴근하고 동네 한 바퀴 돌아야겠어요~
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="comment-item">
-                <div class="comment-author">
-                  <img src="./images/comment-author-icon.png" alt="사용자 프로필 이미지" />
-                  <span>방문자</span>
-                </div>
-                <div class="comment-content">
-                  이 글 읽으면서 계속 고개를 끄덕였네요 👍 특히 자기계발서 이야기... 저도 요즘 '갓생살기' 영상 보면서
-                  조급해졌었는데, 모모 다시 읽어봐야겠어요! 시간은 아끼는 게 아니라 느끼는 거라는 말에 완전 공감입니다.
-                  저도 이제는 하루에 한 번은 커피 마시면서 창밖 구경하기로 했어요 ☕️
-                </div>
-              </div>
-            </li>
           </ul>
         </section>
 
@@ -114,20 +108,21 @@
           <h2>Contents</h2>
           <ol class="contents">
             <li>
-              <a href="#">자기소개</a>
+              <a href="#me">자기소개</a>
             </li>
             <li>
-              <a href="#">나만의 갤러리</a>
+              <a href="#gallary">나만의 갤러리</a>
             </li>
             <li>
-              <a href="#">나를 울린 인생 작품</a>
+              <a href="#cry">나를 울린 인생 작품</a>
             </li>
             <li>
-              <a href="#">감상평</a>
+              <a href="#review-section">감상평</a>
             </li>
           </ol>
         </nav>
       </aside>
     </div>
   </body>
+  <script src="./js/index.js"></script>
 </html>
